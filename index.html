@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,6 +20,25 @@
             background: linear-gradient(to right, #10b981, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        /* Custom Swiper Styles */
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            transition: background-color 0.3s ease;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 24px;
+        }
+        /* Hide pagination bullets */
+        .swiper-pagination {
+            display: none;
         }
     </style>
 </head>
@@ -48,18 +69,18 @@
 
             <section class="max-w-6xl mx-auto mt-16">
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    <!-- Image on the left -->
-                    <div class="md:w-1/2 w-full">
-                        <div class="p-1 rounded-lg overflow-hidden shadow-2xl bg-gray-800">
-                            <img src="placeholder_main_image.jpg" alt="Neuronal Signal Visualization" class="w-full h-auto object-cover rounded-md">
-                        </div>
-                    </div>
-                    <!-- Overview on the right -->
+                    <!-- Overview on the left -->
                     <div class="md:w-1/2 w-full">
                         <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
                         <p class="text-lg text-gray-300 leading-relaxed">
                             At the Byrd's Alzheimer Institute, I was responsible for analyzing electrical spike patterns from neuronal networks using multielectrode arrays (MEA). This project involved a complete workflow, from conducting wet lab procedures for cell culturing to developing custom analysis scripts. The goal was to process complex raw data into meaningful insights about neuronal activity, contributing to research on Alzheimer's disease.
                         </p>
+                    </div>
+                    <!-- Image on the right -->
+                    <div class="md:w-1/2 w-full">
+                        <div class="p-1 rounded-lg overflow-hidden shadow-2xl bg-gray-800">
+                            <img src="Spike_Detector4.jpg" alt="Neuronal Signal Visualization" class="w-full h-auto object-cover rounded-md">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -105,31 +126,53 @@
 
                 <div class="mt-16">
                     <h2 class="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div>
-                            <img src="placeholder_image_1.jpg" alt="Microscopy Image" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">Primary neuron cultures under microscopy.</p>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper-container mySwiper relative bg-gray-900/50 rounded-lg p-4">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img src="Spike_Detector4.jpg" alt="Spike Detector" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">Spike detection visualization from raw signal data.</p>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <img src="raster_plot.jpg" alt="Raster Plot" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">Raster plot showing neuronal spike timing.</p>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                               <img src="Mag_Spectra.jpg" alt="Magnitude Spectra" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Magnitude spectrum analysis of neuronal signals.</p>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                               <img src="Mag_Spectra_DIV.jpg" alt="Magnitude Spectra by DIV" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Comparative magnitude spectra across Days In Vitro (DIV).</p>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <img src="MEA_Incubator.jpg" alt="MEA Incubator" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">The MEA recording system inside the incubator.</p>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide">
+                                <img src="Clean_MEA.jpg" alt="Clean MEA Plate" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">A clean multielectrode array (MEA) plate before cell plating.</p>
+                            </div>
+                            <!-- Slide 7 -->
+                             <div class="swiper-slide">
+                                <img src="Cell_Incubator.jpg" alt="Cell Incubator" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">Cell incubator for maintaining primary neuron cultures.</p>
+                            </div>
+                            <!-- Slide 8 -->
+                            <div class="swiper-slide">
+                                <img src="Genotyping.jpg" alt="Genotyping Gel" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">Gel electrophoresis for genotyping procedures.</p>
+                            </div>
                         </div>
-                        <div>
-                            <img src="placeholder_image_2.jpg" alt="MEA device" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">The 60-electrode MEA 2100 device used for recordings.</p>
-                        </div>
-                        <div>
-                            <img src="placeholder_image_3.jpg" alt="Raw signal data" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">Visualization of raw signal data before filtering.</p>
-                        </div>
-                         <div>
-                            <img src="placeholder_image_4.jpg" alt="Frequency spectrum plot" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">Power spectrum analysis showing frequency bands.</p>
-                        </div>
-                         <div>
-                            <img src="placeholder_image_5.jpg" alt="Spike train detection" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">Detected spike trains after applying a bandpass filter.</p>
-                        </div>
-                         <div>
-                            <img src="placeholder_image_6.jpg" alt="Burst analysis" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
-                            <p class="text-center text-sm mt-2 text-gray-500">Integrated spike activity used for burst analysis.</p>
-                        </div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
 
@@ -153,6 +196,25 @@
             <p>&copy; 2025 Vitor Riekes Viana. All Rights Reserved.</p>
         </div>
     </footer>
+    
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 </html>
