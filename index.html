@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Neuronal Spike Pattern Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Blue-Gray */
+            color: #E5E7EB; /* Light Gray */
+        }
+        .brand-gradient {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gray-800/50 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <a href="https://vitorriekesviana.github.io" class="text-lg font-semibold hover:text-blue-400 transition-colors duration-300">&larr; Back to Main Portfolio</a>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-6">
+
+            <section class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Neuronal Spike Pattern Analysis</h1>
+                <p class="text-xl mt-2 brand-gradient">Signal Processing and Analysis for Alzheimer's Research</p>
+            </section>
+            
+            <section class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#link_to_matlab_code" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+                    View MATLAB Code
+                </a>
+                <a href="#link_to_python_code" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+                    View Python Code
+                </a>
+            </section>
+
+            <section class="max-w-6xl mx-auto mt-16">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Image on the left -->
+                    <div class="md:w-1/2 w-full">
+                        <div class="p-1 rounded-lg overflow-hidden shadow-2xl bg-gray-800">
+                            <img src="placeholder_main_image.jpg" alt="Neuronal Signal Visualization" class="w-full h-auto object-cover rounded-md">
+                        </div>
+                    </div>
+                    <!-- Overview on the right -->
+                    <div class="md:w-1/2 w-full">
+                        <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            At the Byrd's Alzheimer Institute, I was responsible for analyzing electrical spike patterns from neuronal networks using multielectrode arrays (MEA). This project involved a complete workflow, from conducting wet lab procedures for cell culturing to developing custom analysis scripts. The goal was to process complex raw data into meaningful insights about neuronal activity, contributing to research on Alzheimer's disease.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-5xl mx-auto">
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Project Breakdown</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start gap-4 transition-all hover:bg-gray-800/70">
+                            <div class="flex-shrink-0 text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M9 6h6M9 18h6M9 6l6 12M9 18L15 6" /></svg></div>
+                            <div>
+                                <h3 class="text-xl font-bold">Wet Lab & Cell Culture</h3>
+                                <p class="text-gray-400 mt-1">Performed essential wet lab procedures, including maintaining and passaging HEK cells and conducting primary neuron cultures to ensure high-quality samples for analysis.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start gap-4 transition-all hover:bg-gray-800/70">
+                             <div class="flex-shrink-0 text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></div>
+                            <div>
+                                <h3 class="text-xl font-bold">Data Acquisition with MEA</h3>
+                                <p class="text-gray-400 mt-1">Utilized multielectrode arrays (MEA) and a multichannel analyzer to record raw electrical signals from neuronal networks, sampling at 25kHz per channel.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start gap-4 transition-all hover:bg-gray-800/70">
+                            <div class="flex-shrink-0 text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 0l-3-3m3 3l-3 3M5 21l7-7-7-7M19 21l-7-7 7-7" /></svg></div>
+                            <div>
+                                <h3 class="text-xl font-bold">MATLAB & Python Scripting</h3>
+                                <p class="text-gray-400 mt-1">Developed custom scripts in both MATLAB and Python to automate the data analysis pipeline, increasing data processing efficiency by 30%.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start gap-4 transition-all hover:bg-gray-800/70">
+                             <div class="flex-shrink-0 text-blue-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" /></svg></div>
+                            <div>
+                                <h3 class="text-xl font-bold">Frequency Analysis</h3>
+                                <p class="text-gray-400 mt-1">Applied Fourier transforms to perform frequency analysis on the signals, identifying power in different EEG bands and detecting spike trains using custom filters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div>
+                            <img src="placeholder_image_1.jpg" alt="Microscopy Image" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">Primary neuron cultures under microscopy.</p>
+                        </div>
+                        <div>
+                            <img src="placeholder_image_2.jpg" alt="MEA device" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">The 60-electrode MEA 2100 device used for recordings.</p>
+                        </div>
+                        <div>
+                            <img src="placeholder_image_3.jpg" alt="Raw signal data" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">Visualization of raw signal data before filtering.</p>
+                        </div>
+                         <div>
+                            <img src="placeholder_image_4.jpg" alt="Frequency spectrum plot" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">Power spectrum analysis showing frequency bands.</p>
+                        </div>
+                         <div>
+                            <img src="placeholder_image_5.jpg" alt="Spike train detection" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">Detected spike trains after applying a bandpass filter.</p>
+                        </div>
+                         <div>
+                            <img src="placeholder_image_6.jpg" alt="Burst analysis" class="rounded-lg shadow-lg w-full h-64 object-cover bg-gray-900">
+                            <p class="text-center text-sm mt-2 text-gray-500">Integrated spike activity used for burst analysis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-4 text-center">Technologies Used</h2>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="bg-indigo-900/50 text-indigo-300 text-sm font-semibold px-3 py-1 rounded-full">MATLAB</span>
+                        <span class="bg-yellow-900/50 text-yellow-300 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-teal-900/50 text-teal-300 text-sm font-semibold px-3 py-1 rounded-full">Signal Processing</span>
+                        <span class="bg-red-900/50 text-red-300 text-sm font-semibold px-3 py-1 rounded-full">Fourier Analysis</span>
+                        <span class="bg-green-900/50 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">MEA Systems</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-sm font-semibold px-3 py-1 rounded-full">Cell Culture</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-6 mt-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Vitor Riekes Viana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
